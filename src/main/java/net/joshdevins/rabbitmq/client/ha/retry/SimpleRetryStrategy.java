@@ -19,7 +19,8 @@ package net.joshdevins.rabbitmq.client.ha.retry;
 import net.joshdevins.rabbitmq.client.ha.BooleanReentrantLatch;
 
 import org.apache.commons.lang.Validate;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A {@link RetryStrategy} that uses a timeout between retry attempts. This
@@ -32,7 +33,7 @@ import org.apache.log4j.Logger;
  */
 public class SimpleRetryStrategy implements RetryStrategy {
 
-    private static final Logger LOG = Logger.getLogger(SimpleRetryStrategy.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SimpleRetryStrategy.class);
 
     /**
      * Default value = 10000 = 10 seconds

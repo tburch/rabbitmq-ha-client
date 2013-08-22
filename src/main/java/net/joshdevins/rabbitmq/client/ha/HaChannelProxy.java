@@ -29,7 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import net.joshdevins.rabbitmq.client.ha.retry.RetryStrategy;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.rabbitmq.client.AlreadyClosedException;
 import com.rabbitmq.client.Channel;
@@ -42,7 +43,7 @@ import com.rabbitmq.client.Consumer;
  */
 public class HaChannelProxy implements InvocationHandler {
 
-    private static final Logger LOG = Logger.getLogger(HaChannelProxy.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HaChannelProxy.class);
 
     private static final String BASIC_CONSUME_METHOD_NAME = "basicConsume";
 

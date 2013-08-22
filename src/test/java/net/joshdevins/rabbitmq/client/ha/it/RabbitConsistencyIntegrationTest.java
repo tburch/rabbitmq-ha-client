@@ -7,7 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +47,7 @@ public class RabbitConsistencyIntegrationTest {
         }
     }
 
-    private static final Logger LOG = Logger.getLogger(RabbitConsistencyIntegrationTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RabbitConsistencyIntegrationTest.class);
 
     private static final int NUM_MESSAGES = 1000;
 

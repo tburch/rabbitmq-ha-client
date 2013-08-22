@@ -26,7 +26,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.apache.commons.lang.Validate;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.rabbitmq.client.Address;
 import com.rabbitmq.client.Channel;
@@ -228,7 +229,7 @@ public class HaConnectionFactory extends ConnectionFactory {
         }
     }
 
-    private static final Logger LOG = Logger.getLogger(HaConnectionFactory.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HaConnectionFactory.class);
 
     /**
      * Default value = 1000 = 1 second

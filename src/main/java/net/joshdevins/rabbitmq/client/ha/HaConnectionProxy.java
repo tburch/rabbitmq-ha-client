@@ -26,7 +26,8 @@ import java.util.Set;
 
 import net.joshdevins.rabbitmq.client.ha.retry.RetryStrategy;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.rabbitmq.client.Address;
 import com.rabbitmq.client.Channel;
@@ -41,7 +42,7 @@ import com.rabbitmq.client.Connection;
  */
 public class HaConnectionProxy implements InvocationHandler {
 
-    private static final Logger LOG = Logger.getLogger(HaConnectionProxy.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HaConnectionProxy.class);
 
     private static Method CREATE_CHANNEL_METHOD;
 

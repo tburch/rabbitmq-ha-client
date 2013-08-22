@@ -20,7 +20,8 @@ import java.io.UnsupportedEncodingException;
 
 import net.joshdevins.rabbitmq.client.ha.HaConnectionFactory;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -38,7 +39,7 @@ import com.rabbitmq.client.AMQP.Queue.BindOk;
 @ContextConfiguration("/META-INF/spring/applicationContext.xml")
 public class RabbitTemplateConsumerIntegrationTest {
 
-    private static final Logger LOG = Logger.getLogger(RabbitTemplateConsumerIntegrationTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RabbitTemplateConsumerIntegrationTest.class);
 
     @Autowired
     private HaConnectionFactory haConnectionFactory;

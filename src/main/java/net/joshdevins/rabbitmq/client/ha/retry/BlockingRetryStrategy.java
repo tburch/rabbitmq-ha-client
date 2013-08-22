@@ -18,7 +18,8 @@ package net.joshdevins.rabbitmq.client.ha.retry;
 
 import net.joshdevins.rabbitmq.client.ha.BooleanReentrantLatch;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A simple retry strategy that waits on the connection gate to be opened before
@@ -28,7 +29,7 @@ import org.apache.log4j.Logger;
  */
 public class BlockingRetryStrategy implements RetryStrategy {
 
-    private static final Logger LOG = Logger.getLogger(BlockingRetryStrategy.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BlockingRetryStrategy.class);
 
     public boolean shouldRetry(final Exception e, final int numOperationInvocations,
             final BooleanReentrantLatch connectionGate) {
